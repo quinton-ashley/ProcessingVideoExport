@@ -3,7 +3,7 @@
  * 
  * Quinton Ashley edited this class in 2018 so that it can be used 
  * to export high quality video from high-res Processing sketches.
- * By default it encodes h.265 videos at 10 bit color depth.
+ * By default it encodes h.265 videos at 8 bit color depth.
  * 
  * https://github.com/quinton-ashley/processingvideoexport
  * 
@@ -64,9 +64,9 @@ public class VideoExport {
 
 	protected final String ffmpegMetadataComment = "Exported using VideoExport for Processing - https://github.com/hamoid/VideoExport-for-Processing";
 	protected String ffmpegVideoCodec = "libx265";
-	protected int ffmpegCrfQuality = 28;
+	protected int ffmpegCrfQuality = 25;
 	protected float ffmpegFrameRate;
-	protected String ffmpegPixelFormat = "yuv420p10le";
+	protected String ffmpegPixelFormat = "yuv420p";
 	protected boolean ffmpegFound = false;
 	protected File ffmpegOutputMsg;
 	protected OutputStream ffmpeg;
